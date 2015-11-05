@@ -1,0 +1,64 @@
+html, body {
+margin: 0 auto;
+}
+
+.topBanner {
+
+width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+
+.bannerLogo {
+    width: 400px;
+    height: 400px;
+    background-image: url(../img/DeannaChristineLogo.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -200px;
+    border: 8px solid #540015;
+
+
+}
+
+.nav {
+width: 450px;
+    height: 100px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    margin: -50px 0 0 -165px;
+    -webkit-font-smoothing: antialiased;
+}
+
+span {
+margin-right: 10px;
+    font-family: Oswald-light, sans-serif;
+    font-size: 20px;
+    
+
+}
+
+.firstContainer {
+width: 100vw;
+    height: 100px;
+    background-color: #ffcc99;
+    box-sizing: border-box;
+    border-top: 15px solid #540015;
+
+}
+
+.featherSep {
+width: 100vw;
+    height: 650px;
+    background-image: url(../img/featherseparator.png);
+    background-size: cover;
+
+    box-sizing: border-box;
+}
+
