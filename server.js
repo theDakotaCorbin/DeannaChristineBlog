@@ -14,17 +14,18 @@ var app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(session({
-   secret: 'Elder Corbin', 
+   secret: 'Deanna Christine', 
    resave: false,
    saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
 //MODELS
-var Person = require('./Models/newBlogModel');
+var Blog = require('./Models/newBlogModel');
 
 //CONTROLLERS
-var personCtrl = require('./Controllers/newBlogCtrl');
+var newBlogCtrl = require('./Public/Controllers/newBlogCtrl');
+
 
 
 

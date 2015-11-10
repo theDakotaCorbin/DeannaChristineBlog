@@ -1,10 +1,4 @@
-angular.module('deannaBlogApp')
-
-.controller('newBlogCtrl', function($scope, $rootScope, $state){
-
-
-
-var Person = require('../Models/newBlogModel.js');
+var Blog = require('../../Models/newBlogModel.js');
 module.exports = {
     createNewBlog:function(req, res) {
      var newBlog = new Blog(req.body);
@@ -39,4 +33,3 @@ module.exports = {
     
     
 }
-})

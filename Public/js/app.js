@@ -22,7 +22,7 @@ angular.module('deannaBlogApp', ['ui.router'])
      .state('blog', {
         url: '/blog',
         templateUrl: '../Views/blogView.html',
-        controller: 'newBlogCtrl'
+        controller: 'mainCtrl'
         
     })
     
@@ -47,9 +47,9 @@ angular.module('deannaBlogApp', ['ui.router'])
         
     })
       .state('admin', {
-        url: '/admin',
+        url: '/queendadmin',
         templateUrl: '../Views/adminView.html',
-        controller: 'newBlogCtrl'
+        controller: 'mainCtrl'
         
     })
     
@@ -58,12 +58,12 @@ angular.module('deannaBlogApp', ['ui.router'])
     $urlRouterProvider.otherwise('/home');
     
     
-});
+})
 
 
-app.controller('mainCtrl', function($scope, mainService) {
+.controller('mainCtrl', function($scope, mainService) {
   mainService.getBlog().then(function(response) {
-  $scope.persons = response.data
+  $scope.blogs = response.data
         console.log(response);
   })
   $scope.newBlog = function(blog) {
@@ -89,7 +89,7 @@ app.controller('mainCtrl', function($scope, mainService) {
   
   
 })
-app.service('mainService', function($http) {
+.service('mainService', function($http) {
     this.getBlog = function () {
         return $http.get('/api/Blogs')
     }

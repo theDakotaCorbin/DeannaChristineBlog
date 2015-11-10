@@ -18,13 +18,24 @@
 
 
   </div>
-  <div class='aboutBG'>
+  <div class='blogBG'>
     <div class='blogWrapper'>
-      <h1>{{blog.title}}</h1>
-      <h4>{{blog.date}}</h4>
-      <h6>Category: {{blog.category}}</h6>
-      <p>{{blog.text}}</p>
-
+        <div class='blogPost' ng-repeat='blog in blogs'>
+            
+            
+     <img class='mainPic' src='{{blog.mainPic}}'/>       
+            
+      <h1 class='blogHeader'>{{blog.title}}</h1>
+      <span class='blogDate'>{{blog.date}}</span>
+      <span class='blogDateCat'>Category: {{blog.category}}</span> 
+      <p>{{blog.blogText}}</p>
+            <br/>
+            <br/>
+            <img class='subPics' src='{{blog.subPic1}}'/>
+            <img class='subPics' src='{{blog.subPic2}}'/>
+            <img class='subPics' src='{{blog.subPic3}}'/>
+            
+        </div>
     </div>
   </div>
 

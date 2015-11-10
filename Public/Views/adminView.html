@@ -1,28 +1,74 @@
-<div class='pageWrapper'>
+<div class='blogPageWrapper animated fadeIn'>
 
-Title: <input class='fields' type="text" placeholder="Title" ng-model='blog.title'>
-        <br/>
-        Date: <input class='fields' type="text" placeholder="Date" ng-model='blog.date'>
-            <br/>
-        Category: <input class='fields' type="text" placeholder="Category" ng-model='blog.category'>
-        <br/>
-        Blog Text: <input class='fields' type="text" placeholder="Blog Text" ng-model='blog.blogText'>
-        <br/>
-        Main Pic URL: <input class='fields' type="text" placeholder="URL" ng-model='blog.mainPic'>
-        <br/>
-        Pic 1 URL: <input class='fields' type="text" placeholder="URL" ng-model='blog.subPic1'>
-        <br/>
-        Pic 2 URL: <input class='fields' type="text" placeholder="URL" ng-model='blog.subPic2'>
-        <br/>
-        Pic 3 URL: <input class='fields' type="text" placeholder="URL" ng-model='blog.subPic3'>
-        <br/>
-        <input type='submit' value="Save" ng-click='newBlog(blog)'>
-        <br/>
+  <div id='nav_bar'>
+
+    <span class='navLogo'><a href='/#/home'>DEANNA CHRISTINE</a></span>
+    <span><a href='/#/home'>HOME</a></span>
+    <span><a href='/#/about'>ABOUT</a></span>
+    <span><a class='animated infinite pulse' href='/#/blog'>BLOG</a></span>
+    <span><a href='/#/fashion'>FASHION</a></span>
+    <span><a href='/#/makeup'>MAKEUP</a></span>
+    <span><a href='/#/contact'>CONTACT</a></span>
 
 
+    <a href='https://www.facebook.com/deannacbarton' target="_blank"><span class='socialIcon1'></span></a>
+    <a href='https://www.instagram.com/deannaccorbin' target="_blank"><span class='socialIcon2'></span></a>
+    <a href='https://www.pinterest.com/deannacb' target="_blank"><span class='socialIcon3'></span></a>
 
 
+  </div>
 
+
+  <div class='blogBG'>
+    <div class='blogWrapper'>
+
+      <div class='blogPoster'>
+        Title:
+        <input type="text" placeholder="Title" ng-model='blog.title'>
+        <br/>
+        <br/> Date:
+        <input type="text" placeholder="Date" ng-model='blog.date'>
+        <br/>
+        <br/> Category:
+        <input type="text" placeholder="Category" ng-model='blog.category'>
+        <br/>
+        <br/> Blog Text:
+        <input type="text" placeholder="Blog Text" ng-model='blog.blogText'>
+        <br/>
+        <br/> Main Pic URL:
+        <input type="text" placeholder="URL" ng-model='blog.mainPic'>
+        <br/>
+        <br/> Pic 1 URL:
+        <input type="text" placeholder="URL" ng-model='blog.subPic1'>
+        <br/>
+        <br/> Pic 2 URL:
+        <input type="text" placeholder="URL" ng-model='blog.subPic2'>
+        <br/>
+        <br/> Pic 3 URL:
+        <input type="text" placeholder="URL" ng-model='blog.subPic3'>
+        <br/>
+        <br/>
+        <input type='submit' value="Post" ng-click='newBlog(blog)'>
+        <br/>
+      </div>
+
+      <div class='blogPost' ng-repeat='blog in blogs'>
+
+        <img class='mainPic' src='{{blog.mainPic}}' />
+
+        <h1 class='blogHeader'>{{blog.title}}</h1>
+        <span class='blogDate'>{{blog.date}}</span>
+        <span class='blogDateCat'>Category: {{blog.category}}</span>
+        <p>{{blog.blogText}}</p>
+        <br/>
+        <br/>
+        <img class='subPics' src='{{blog.subPic1}}' />
+        <img class='subPics' src='{{blog.subPic2}}' />
+        <img class='subPics' src='{{blog.subPic3}}' />
+        <input id='deleteButton' type="button" value="Delete" ng-click='deleteBlog(blog._id)'>
+      </div>
+    </div>
+  </div>
 
 
 </div>
